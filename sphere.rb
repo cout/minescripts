@@ -1,6 +1,6 @@
 # DIM = 32
 # RADIUS = (DIM / 2.0) - 0.5
-RADIUS = 7
+RADIUS = (ARGV[0] || 6.5).to_f
 DIM = (RADIUS + 1) * 2
 
 a = [ ]
