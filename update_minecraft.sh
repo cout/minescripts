@@ -44,7 +44,13 @@ mkdir -p ~/.minecraft/bin/cjb
 cd ~/.minecraft/bin/cjb
 unzip -o -q ${cjb}
 cp -r "Put in Minecraft Folder"/* ~/.minecraft
-cp -r "Put in minecraft.jar - FOR XRAY ONLY"/* ~/.minecraft/bin/t
+cd ~/.minecraft/bin/t
+unzip -o -q ~/.minecraft/bin/cjb/"Put in minecraft.jar - FOR XRAY ONLY"/CJB_XRAY_CLASSES.zip
+
+# Disable some cjb mods
+mkdir -p ~/.minecraft/mods-disabled
+mv ~/.minecraft/mods/CJB_QUICKCRAFT.zip ~/.minecraft/mods-disabled
+mv ~/.minecraft/mods/CJB_MEASURES.zip ~/.minecraft/mods-disabled
 
 # Remove META-INF
 echo "+ Removing META-INF..."
