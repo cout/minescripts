@@ -10,7 +10,7 @@ md5sum=$(md5sum ~/.minecraft/bin/minecraft.jar | awk '{print $1;}')
 
 # Backup minecraft jar
 echo "+ Backing up minecraft.jar..."
-echo cp -v ~/.minecraft/bin/minecraft.jar ~/.minecraft/bin/minecraft.jar.${md5sum}
+cp -v ~/.minecraft/bin/minecraft.jar ~/.minecraft/bin/minecraft.jar.${md5sum}
 
 # Unzip minecraft jar
 echo "+ Unzipping minecraft.jar..."
