@@ -38,19 +38,19 @@ unzip -o -q "${playerapi}"
 
 # Install latest cjb
 echo "+ Installing latest cjb..."
-cjb=$(ls -1 $DOWNLOADS/CJBMods*.zip | sort | tail -1)
+cjb=$(ls -1 $DOWNLOADS/CJB-*-modloader.zip | sort | tail -1)
 rm -rf ~/.minecraft/bin/cjb
 mkdir -p ~/.minecraft/bin/cjb
 cd ~/.minecraft/bin/cjb
 unzip -o -q ${cjb}
 cp -r "Put in Minecraft Folder"/* ~/.minecraft
 cd ~/.minecraft/bin/t
-unzip -o -q ~/.minecraft/bin/cjb/"Put in minecraft.jar - FOR XRAY ONLY"/CJB_XRAY_CLASSES.zip
+unzip -o -q ~/.minecraft/bin/cjb/"Put in minecraft.jar - FOR XRAY ONLY"/CJB.zip
 
 # Disable some cjb mods
 mkdir -p ~/.minecraft/mods-disabled
-mv ~/.minecraft/mods/CJB_QUICKCRAFT.zip ~/.minecraft/mods-disabled
-mv ~/.minecraft/mods/CJB_MEASURES.zip ~/.minecraft/mods-disabled
+mv ~/.minecraft/mods/mod_cjb_quickcraft.zip ~/.minecraft/mods-disabled
+mv ~/.minecraft/mods/mod_cjb_measure.zip ~/.minecraft/mods-disabled
 
 # Remove META-INF
 echo "+ Removing META-INF..."
