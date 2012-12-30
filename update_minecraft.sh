@@ -19,10 +19,15 @@ mkdir -p ~/.minecraft/bin/t
 cd ~/.minecraft/bin/t
 unzip -o -q ../minecraft.jar
 
-# Install latest modloader
-echo "+ Installing latest modloader..."
-modloader=~/download/minecraft/ModLoader.zip
-unzip -o -q "${modloader}"
+# # Install latest modloader
+# echo "+ Installing latest modloader..."
+# modloader=~/download/minecraft/ModLoader.zip
+# unzip -o -q "${modloader}"
+
+# Install latest forge
+echo "+ Installing latest forge..."
+forge=~/download/minecraft/minecraftforge-universal-*.zip
+unzip -o -q "${forge}"
 
 # Install latest optifine
 echo "+ Installing latest optifine..."
@@ -38,7 +43,7 @@ unzip -o -q "${playerapi}"
 
 # Install latest cjb
 echo "+ Installing latest cjb..."
-cjb=$(ls -1 $DOWNLOADS/CJB-*-modloader.zip | sort | tail -1)
+cjb=$(ls -1 $DOWNLOADS/CJB-*-forge.zip | sort | tail -1)
 rm -rf ~/.minecraft/bin/cjb
 mkdir -p ~/.minecraft/bin/cjb
 cd ~/.minecraft/bin/cjb
